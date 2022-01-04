@@ -54,7 +54,7 @@ body{
     display:inline-block;
     position:absolute;
     transform-origin:bottom;
-
+    transform:rotate(-90deg);
 }
 .moon-img{
     width:10vmin;
@@ -64,24 +64,25 @@ body{
 }
 .greenContainer{
     width:var(--greenSize);
-    animation:orbit 2s infinite ease-out;
+
 }
 .yellowContainer{
     width:var(--yellowSize);
-    animation:orbit 16s infinite ease-out;
+
 }
 .redContainer{
     width:var(--redSize);
-    animation:orbit 3s infinite ease-out;
+
 }
 .blueContainer{
     width:var(--blueSize);
-    animation:orbit 13s infinite ease-out;
+
 }
 .green{
     --shadowColor:#1f966e;
     width:100%;
     height:var(--greenSize);
+    
 
 }
 .yellow{
@@ -114,14 +115,7 @@ body{
     z-index:-1;
 }
 
-@keyframes orbit {
-    from{
-        transform:rotate(-90deg);
-    }
-    to{
-        transform:rotate(100deg);
-    }
-}
+
 
 .rotateMsg{
     position:absolute;
