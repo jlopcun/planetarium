@@ -33,15 +33,9 @@ const MoonMovements = () =>{
         delay:21000
     });
 }
-if(pageHeight>pageWidth){
-    $rotateMsg.classList.remove('hidden')
-}
-else{
-    $rotateMsg.classList.add('hidden');
-    MoonMovements()
-}
+MoonMovements();
 
-
+(pageHeight>pageWidth)?$rotateMsg.classList.remove('hidden'):$rotateMsg.classList.add('hidden');
 
 
 
@@ -54,13 +48,7 @@ $continue.addEventListener('click',()=>{
 const checkRotate = () =>{
     pageWidth = window.innerWidth;
     pageHeight = window.innerHeight;
-    if(pageHeight>pageWidth){
-        $rotateMsg.classList.remove('hidden')
-    }
-    else{
-        $rotateMsg.classList.add('hidden');
-        MoonMovements()
-    }
+    (pageHeight>pageWidth)?$rotateMsg.classList.remove('hidden'):$rotateMsg.classList.add('hidden');
 }
 window.addEventListener('resize',checkRotate)
 
